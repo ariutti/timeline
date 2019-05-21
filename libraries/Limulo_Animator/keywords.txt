@@ -1,0 +1,7 @@
+Animator_ASR	KEYWORD1
+init	KEYWORD2
+update	KEYWORD2
+triggerAttack	KEYWORD2
+triggerRelease	KEYWORD2
+getY	KEYWORD2
+getState KEYWORD2
