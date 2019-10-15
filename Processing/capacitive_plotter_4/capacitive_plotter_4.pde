@@ -20,7 +20,7 @@
 // put here the number of MPR you are using
 final int NMPR = 1;
 // put here the number of pad used by each MPR
-final int NPADS[] = {7};
+final int NPADS[] = {7,6,6,6};
 // number of graphs will be calculated according to NPADS
 int NGRAPHS; 
 Graph graphs[];
@@ -47,7 +47,7 @@ color bckgr = color(30, 30, 30);
 // SETUP ////////////////////////////////////////////////////////////////////////////
 void setup()
 {
-  size(800, 600);
+  size(1200, 800);
   //fullScreen(2);
   smooth();
   
@@ -68,7 +68,7 @@ void setup()
   // serial stuff
   println(Serial.list());
   s_port = new Serial(this, Serial.list()[0], 9600);
-  s_port.buffer( 2 );
+  s_port.buffer( 64 );
 
   // graphics stuff
   font = loadFont("Monospaced-32.vlw");
