@@ -21,7 +21,8 @@ public:
 	Vehicle() {};
 
   // Initial position, maxspeed, maxforce, damp distance.
-  void init( float _x, float _ms, float _mf, int _damp );
+  void init( float _x, float _ms, float _mf, float _damp );
+  void changePhysics(float _ms, float _mf, float _damp);
   void update();
   void setTarget(float _target);
   float getPosition();
@@ -30,11 +31,10 @@ private:
   float position;
   float velocity;
   float acceleration;
+  float target;
 
   float maxforce;    // Maximum steering force
   float maxspeed;    // Maximum speed
-
-  float target;
-  int DAMPING_DISTANCE;
+  float DAMPING_DISTANCE;
 };
 #endif

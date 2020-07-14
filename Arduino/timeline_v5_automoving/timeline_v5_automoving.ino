@@ -62,7 +62,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(NLEDS, LEDPIN, NEO_RGBW + NEO_KHZ800
 Carriage carriage;
 
 // DEBUG STUFF
-boolean DEBUG						= false;
+boolean DEBUG						= true;
 boolean B_TO_VVVV				= false;
 boolean B_TO_PLOTTER		= false; // this boolean is set by Processing Plotter
 boolean B_TO_SC					= false; // when you want to have a SuperCollider sound feedback
@@ -145,7 +145,7 @@ void setup()
     // an automatic release will be interpreted as a user release
     // so a change in the pad index :(
     mpr[i].cap.setTouched( 1, 1, 32 );
-    mpr[i].cap.setThresholds( 25, 5 ); // originariamente: 18, 9
+    mpr[i].cap.setThresholds( 18, 5 ); // originariamente: 18, 9 //25, 5
     mpr[i].cap.setDebounces(2, 2);
 
     // initial reset of MPR struct fields

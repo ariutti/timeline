@@ -1,7 +1,9 @@
 /*
   Animator Sine
   Nicola Ariutti
-  2018/09/25
+  2020/06/16
+
+  added a "reset phase" function
 */
 
 #ifndef ANIMATOR_SINE_H
@@ -23,6 +25,7 @@ class Animator_Sine
     void init(float _freq, float _phase);
     void update();
     void changeFreq(float _freq);
+    void reset();
     float getY();
 };
 

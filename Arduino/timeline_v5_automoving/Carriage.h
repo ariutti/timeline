@@ -33,10 +33,11 @@ private:
     ACTIVE,		// the user is touching
 		STANDBY		// we enter here when time is passed from the last "active" touch
   } state = AUTO;
+  
 	// time to wait before moving from ACTIVE to STANDBY
   long TIME_TO_STANDBY = 5000; // ms
-	// time to wait before moving from ACTIVE to STANDBY
-	long TIME_TO_AUTO = 5000; // ms
+	// time to wait before moving from STANDBY to AUTO
+	long TIME_TO_AUTO = 10; // ms
 	// this time variable is used for in-between movements while in AUTO mode
 	long TIME_TO_REACH = 2000; // ms
   long prevTime = 0;

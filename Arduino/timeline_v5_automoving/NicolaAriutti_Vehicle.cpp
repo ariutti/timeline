@@ -1,16 +1,24 @@
 #include "NicolaAriutti_Vehicle.h"
 
 
-void Vehicle::init(float _x, float _ms, float _mf, int _damp)
+void Vehicle::init(float _x, float _ms, float _mf, float _damp)
 {
 	acceleration = 0.0;
 	velocity = 0.0;
 	position = _x;
 	target = position;
 
-	maxspeed = _ms;
-	maxforce = _mf;
-	DAMPING_DISTANCE = _damp;
+  changePhysics(_ms, _mf, _damp);
+	//maxspeed = _ms;
+	//maxforce = _mf;
+	//DAMPING_DISTANCE = _damp;
+}
+
+void Vehicle::changePhysics(float _ms, float _mf, float _damp)
+{
+  maxspeed = _ms;
+  maxforce = _mf;
+  DAMPING_DISTANCE = _damp;
 }
 
 // Method to update position

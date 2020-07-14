@@ -33,8 +33,16 @@ void Animator_Sine::changeFreq( float _freq )
   freq = _freq;
 }
 
+// TODO: add a function here to reset the phase
+// or, put it in other terms, reset the sine to make
+// it restart from the beginning
+void Animator_Sine::reset() 
+{
+  t0 = (millis() * 0.001);
+  phase = PI * 0.5;
+}
+
 float Animator_Sine::getY() 
 {
   return y;
 }
-
